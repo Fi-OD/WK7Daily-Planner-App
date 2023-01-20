@@ -11,3 +11,10 @@ setInterval(
 
 
 //    $("#dateInput").datepicker();
+
+
+// this code adds the css past tag to a row when the current time is later
+
+// this code add the css present tag to a row when the current time is the same as th row hour
+
+// this code adds the css future tag to a row when the current time is earlier than the row hour
