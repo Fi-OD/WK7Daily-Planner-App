@@ -6,15 +6,40 @@ setInterval(
     function () {
 
 
-        $currentDay.text(moment().format("Do MMMM YYYY"));
+        $currentDay.text(moment().format("dddd, MMMM Do"));
     }, 1000)
 
 
 //    $("#dateInput").datepicker();
 
+let row = $(".row")
+let $currentTime = moment().format("h")
 
-// this code adds the css past tag to a row when the current time is later
+// this code appends the css past tag to a row when the current time is later
 
-// this code add the css present tag to a row when the current time is the same as th row hour
+ console.log($currentTime)
 
-// this code adds the css future tag to a row when the current time is earlier than the row hour
+
+
+let $selectedId = $("#"+ $currentTime)
+
+console.log($selectedId)
+
+//$("#"+ $currentTime + "> .childDiv").addClass("present");
+
+$selectedId.addClass("present")
+
+
+
+
+
+
+    //".col-1 hour".parent().append(".present")}
+
+
+
+
+
+// this code appends the css present tag to a row when the current time is the same as th row hour
+
+// this code appends the css future tag to a row when the current time is earlier than the row hour
