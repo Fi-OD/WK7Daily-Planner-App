@@ -4,12 +4,8 @@
 let $currentDay = $("#currentDay")
 setInterval(
     function () {
-
-
         $currentDay.text(moment().format("dddd, MMMM Do"));
     }, 1000)
-
-
 
 // this code appends the css present tag to a row when the current time is the same as th row hour
 let $currentTime = moment().format("H");
@@ -45,7 +41,20 @@ $("[id]").each(function(){
 
 // Save the event in local storage when the save button is clicked.
 
+let $saveButton =$("button");
+$saveButton.on('click',function (){
+console.log("click");
 
+})
+
+// retrieve the text from the container and store it in a variable
+let $inputtedText = $("input");
+let $textInputValues = []
+
+$inputtedText.each(function() {
+  $textInputValues.push($(this).val());
+});
+console.log($textInputValues);
 // Persist events between refreshes of a page
 
 
