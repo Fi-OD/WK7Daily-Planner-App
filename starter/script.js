@@ -14,7 +14,7 @@ setInterval(
 // this code appends the css present tag to a row when the current time is the same as th row hour
 let $currentTime = moment().format("H");
 
-//let $currentTime = 11
+//let $currentTime = 10
  console.log($currentTime)
 
 let $selectedId = $("#"+ $currentTime);
