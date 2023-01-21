@@ -13,28 +13,27 @@ setInterval(
 //    $("#dateInput").datepicker();
 
 let row = $(".row")
-let $currentTime = moment().format("h")
 
-// this code appends the css past tag to a row when the current time is later
+
+// this code appends the css present tag to a row when the current time is the same as th row hour
+let $currentTime = moment().format("h");
 
  console.log($currentTime)
 
 
 
-let $selectedId = $("#"+ $currentTime)
+let $selectedId = $("#"+ $currentTime);
 
 console.log($selectedId)
 
-//$("#"+ $currentTime + "> .childDiv").addClass("present");
-
-$selectedId.addClass("present")
+$selectedId.addClass("present");
 
 
-
+// this code appends the css past tag to a row when the current time is later
 
 
 
-    //".col-1 hour".parent().append(".present")}
+
 
 
 
