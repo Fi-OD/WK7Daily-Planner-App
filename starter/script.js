@@ -33,8 +33,6 @@ $("[id]").each(function(){
   }
 });
 
-
-
 // this code appends the css future tag to a row when the current time is earlier than the row hour
 
 $("[id]").each(function(){
@@ -45,6 +43,9 @@ $("[id]").each(function(){
   }
 });
 
+// Save the event in local storage when the save button is clicked.
 
+
+// Persist events between refreshes of a page
 
 
