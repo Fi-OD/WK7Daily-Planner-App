@@ -39,22 +39,45 @@ $("[id]").each(function(){
   }
 });
 
-// Save the event in local storage when the save button is clicked.
+// Save the event in local storage when the save button is clicked
+
 
 let $saveButton =$("button");
 $saveButton.on('click',function (){
 console.log("click");
 
-})
+saveEvent()
+
+});
+
+function saveEvent (event) {
+
+  let $eventDescription = $("textarea").val();
+  localStorage.setItem($eventDescription)
+
+
+
+
+}
+
 
 // retrieve the text from the container and store it in a variable
-let $inputtedText = $("input");
-let $textInputValues = []
 
-$inputtedText.each(function() {
-  $textInputValues.push($(this).val());
-});
-console.log($textInputValues);
+let $eventDescription = $("textarea").val();
+
+
+
+// storage.local.set()
+
+
+
+/*let $textInput = []
+ $textInput.attr("textarea") 
+
+$("textarea").val();
+console.log($textInput);
+*/
+
 // Persist events between refreshes of a page
 
 
