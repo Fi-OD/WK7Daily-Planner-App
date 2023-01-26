@@ -11,10 +11,10 @@ setInterval(
 let $currentTime = moment().format("H");
 
 //let $currentTime = 10
- console.log($currentTime)
+// console.log($currentTime)
 
 let $selectedId = $("#"+ $currentTime);
-console.log($selectedId)
+//console.log($selectedId)
 
 $selectedId.addClass("present");
 
@@ -23,7 +23,7 @@ $selectedId.addClass("present");
 
 $("[id]").each(function(){
     let $pastId = parseInt($(this).attr("id"));
-    console.log($pastId)
+  //  console.log($pastId)
   if($currentTime > $pastId){
     $(this).addClass("past");
   }
@@ -33,37 +33,44 @@ $("[id]").each(function(){
 
 $("[id]").each(function(){
     let $futureId = parseInt($(this).attr("id"));
-    console.log($futureId)
+//    console.log($futureId)
   if($currentTime < $futureId){
     $(this).addClass("future");
   }
 });
 
-// Save the event in local storage when the save button is clicked
-
+// The following code saves the inputted event description when the button is clicked
 
 let $saveButton =$("button");
 $saveButton.on('click',function (){
-console.log("click");
 
-saveEvent()
+  let $btnId = this.id;
+  //console.log($btnId);
 
-});
+// this code selects the text inputted to the associated save button and stores it in a variable
+  let $eventDescription = $(this).siblings("textarea");
+  let $text = $eventDescription.val();
+//console.log($text);
 
-function saveEvent (event) {
-
-  let $eventDescription = $("textarea").val();
-  localStorage.setItem($eventDescription)
-
+  localStorage.setItem("userText", $text)
+  localStorage.getItem("userText");
+    });
 
 
+  ;
 
-}
+
+
+
+
+
+  //localStorage.getItem($buttonId)
+  //console.log($eventDescription)
+
 
 
 // retrieve the text from the container and store it in a variable
 
-let $eventDescription = $("textarea").val();
 
 
 
